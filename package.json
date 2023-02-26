@@ -1,0 +1,31 @@
+{
+  "name": "aws-terraform-resource-list-action",
+  "version": "1.0.0",
+  "description": "GitHub action to categorize AWS Terraform resources",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js --source-map --license licenses.txt",
+    "format:check": "prettier --check src",
+    "format:write": "prettier --write src",
+    "lint": "eslint src",
+    "prepare": "husky install",
+    "pre-commit": "npm run format:write && npm run build",
+    "test": "c8 ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cds-snc/aws-terraform-resource-list-action.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vercel/ncc": "0.36.1",
+    "ava": "4.3.3",
+    "c8": "7.13.0",
+    "eslint": "8.34.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-security": "1.7.1",
+    "husky": "8.0.3",
+    "prettier": "2.8.4"
+  }
+}
