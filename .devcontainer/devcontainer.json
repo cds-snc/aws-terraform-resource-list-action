@@ -1,0 +1,22 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"extensions": [
+		"redhat.vscode-yaml",
+		"timonwong.shellcheck",
+		"hashicorp.terraform",
+		"github.copilot"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/aws-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/terraform:1": {
+			"version": "latest",
+			"tflint": "latest",
+			"terragrunt": "latest"
+		},
+		"ghcr.io/lukewiwa/features/shellcheck:0": {
+			"version": "stable"
+		}
+	}
+}
