@@ -1,0 +1,307 @@
+{
+    "version": 4,
+    "terraform_version": "1.3.3",
+    "resources": [
+        {
+            "type": "aws_caller_identity",
+            "name": "current",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_policy_document",
+            "name": "route53_resolver_logging_policy",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_policy_document",
+            "name": "sre-bot",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_policy_document",
+            "name": "sre-bot_secrets_manager",
+            "instances": []
+        },
+        {
+            "type": "template_file",
+            "name": "sre-bot",
+            "instances": []
+        },
+        {
+            "type": "aws_acm_certificate",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_acm_certificate_validation",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_cloudwatch_log_group",
+            "name": "sre-bot_group",
+            "instances": []
+        },
+        {
+            "type": "aws_cloudwatch_log_group",
+            "name": "sre_bot_dns",
+            "instances": []
+        },
+        {
+            "type": "aws_cloudwatch_log_resource_policy",
+            "name": "route53_resolver_logging_policy",
+            "instances": []
+        },
+        {
+            "type": "aws_cloudwatch_log_stream",
+            "name": "sre-bot_stream",
+            "instances": []
+        },
+        {
+            "type": "aws_dynamodb_table",
+            "name": "aws_access_requests_table",
+            "instances": []
+        },
+        {
+            "type": "aws_dynamodb_table",
+            "name": "sre_bot_data",
+            "instances": []
+        },
+        {
+            "type": "aws_dynamodb_table",
+            "name": "webhooks_table",
+            "instances": []
+        },
+        {
+            "type": "aws_ecr_repository",
+            "name": "sre-bot",
+            "instances": []
+        },
+        {
+            "type": "aws_ecs_cluster",
+            "name": "sre-bot",
+            "instances": []
+        },
+        {
+            "type": "aws_ecs_service",
+            "name": "main",
+            "instances": []
+        },
+        {
+            "type": "aws_ecs_task_definition",
+            "name": "sre-bot",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_policy",
+            "name": "sre-bot_secrets_manager",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_role",
+            "name": "sre-bot",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_role_policy_attachment",
+            "name": "ecs_task_execution",
+            "instances": []
+        },
+        {
+            "type": "aws_iam_role_policy_attachment",
+            "name": "secrets_manager",
+            "instances": []
+        },
+        {
+            "type": "aws_lb",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_lb_listener",
+            "name": "sre_bot_listener",
+            "instances": []
+        },
+        {
+            "type": "aws_lb_target_group",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_route53_health_check",
+            "name": "sre_bot_healthcheck",
+            "instances": []
+        },
+        {
+            "type": "aws_route53_record",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_route53_record",
+            "name": "sre_bot_certificate_validation",
+            "instances": []
+        },
+        {
+            "type": "aws_route53_resolver_query_log_config",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_route53_resolver_query_log_config_association",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_route53_zone",
+            "name": "sre_bot",
+            "instances": []
+        },
+        {
+            "type": "aws_security_group",
+            "name": "ecs_tasks",
+            "instances": []
+        },
+        {
+            "type": "aws_security_group",
+            "name": "sre_bot_load_balancer",
+            "instances": []
+        },
+        {
+            "type": "aws_availability_zones",
+            "name": "available",
+            "instances": []
+        },
+        {
+            "type": "aws_default_network_acl",
+            "name": "default",
+            "instances": []
+        },
+        {
+            "type": "aws_default_route_table",
+            "name": "default",
+            "instances": []
+        },
+        {
+            "type": "aws_default_security_group",
+            "name": "default",
+            "instances": []
+        },
+        {
+            "type": "aws_eip",
+            "name": "nat",
+            "instances": []
+        },
+        {
+            "type": "aws_internet_gateway",
+            "name": "gw",
+            "instances": []
+        },
+        {
+            "type": "aws_nat_gateway",
+            "name": "nat_gw",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl",
+            "name": "main",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "block_rdp",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "block_ssh",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_egress_443",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_in_ingress_443",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_in_ingress_ephemeral",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_in_response_egress_443",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_in_response_egress_ephemeral",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_out_egress_ephemeral",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_out_response_ingress_443",
+            "instances": []
+        },
+        {
+            "type": "aws_network_acl_rule",
+            "name": "https_request_out_response_ingress_ephemeral",
+            "instances": []
+        },
+        {
+            "type": "aws_route",
+            "name": "private_nat_gateway",
+            "instances": []
+        },
+        {
+            "type": "aws_route",
+            "name": "public_internet_gateway",
+            "instances": []
+        },
+        {
+            "type": "aws_route_table",
+            "name": "private",
+            "instances": []
+        },
+        {
+            "type": "aws_route_table",
+            "name": "public",
+            "instances": []
+        },
+        {
+            "type": "aws_route_table_association",
+            "name": "private",
+            "instances": []
+        },
+        {
+            "type": "aws_route_table_association",
+            "name": "public",
+            "instances": []
+        },
+        {
+            "type": "aws_subnet",
+            "name": "private",
+            "instances": []
+        },
+        {
+            "type": "aws_subnet",
+            "name": "public",
+            "instances": []
+        },
+        {
+            "type": "aws_vpc",
+            "name": "main",
+            "instances": []
+        }
+    ],
+    "check_results": []
+}
