@@ -20,5 +20,10 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            Foo: ${{ steps.ci-dot-file.outputs.categorized-resources }}
+            <details>
+              <summary>Dot file test</summary>
+
+              ${{ steps.ci-dot-file.outputs.categorized-resources }}
+            </details>
           comment_tag: dot-file-path
+          mode: recreate
