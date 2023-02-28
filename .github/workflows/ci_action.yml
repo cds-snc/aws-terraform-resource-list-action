@@ -18,5 +18,5 @@ jobs:
       - name: Comment on PR
         uses: thollander/actions-comment-pull-request@v2
         with:
-          message: ${{ steps.ci-action.outputs.resources }}
+          message: ${{ steps.ci-action.outputs.categorized-resources }}
           comment_tag: dot-file-path
