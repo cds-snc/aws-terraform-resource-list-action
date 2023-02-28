@@ -151,7 +151,7 @@ Looking at the Terraform files one might have a hard time figuring all that out.
 
 Here is an example of how you would use the action to post a comment into a PR based on some input
 
-```
+```yaml
 - name: Test State file
   id: ci-state-file
   uses: cds-snc/aws-terraform-resource-list-action@main
