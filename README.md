@@ -1,3 +1,3 @@
 # AWS Terraform resource list action
 
-The purpose of this action is to parse a Terraform state file, a `terraform graph` dot file, or a directory of terraform files, and to list and categorize the found AWS resources. This should provide a crude overview of the resources required by a specific set of infrastructure of code and should make it easier to get a quick assessment of what resources are used and what risks are associated with the use of those resources.
+The purpose of this action is to read a Terraform state file, a `terraform graph` dot file, or a directory of terraform files, and to list and categorize the found AWS resources. This should provide a crude overview of the resources required by a specific set of infrastructure of code and should make it easier to get a quick assessment of what resources are used and what risks are associated with the use of those resources.

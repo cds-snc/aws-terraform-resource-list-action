@@ -1,0 +1,29 @@
+name: AWS Terraform Resource List Action
+description: GitHub action to automatically list and categorize terraform resources in AWS
+author: "Canadian Digital Service"
+
+inputs:
+  dot-file-path:
+    description: "Path to a terraform graph dot file"
+    required: false
+  terraform-dir-path:
+    description: "Path to a terraform directory"
+    required: false
+  terraform-state-path:
+    description: "Path to a terraform state file"
+    required: false
+  output-format:
+    description: "Output format"
+    required: false
+
+outputs:
+  resources:
+    description: "List of categorized AWS terraform resources"
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
+
+branding:
+  icon: "sunrise"
+  color: "white"

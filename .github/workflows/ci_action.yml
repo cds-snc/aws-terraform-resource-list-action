@@ -1,0 +1,54 @@
+name: CI Action
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+      - name: Test dot file
+        id: ci-dot-file
+        uses: ./
+        with:
+          dot-file-path: ./test_fixtures/graph.dot
+          output-format: markdown
+      - name: Test TF dir
+        id: ci-tf-dir
+        uses: ./
+        with:
+          terraform-dir-path: ./test_fixtures/terraform
+          output-format: markdown
+      - name: Test State file
+        id: ci-state-file
+        uses: ./
+        with:
+          terraform-state-path: ./test_fixtures/state.json
+          output-format: markdown
+      - name: Comment on PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            #### Below is a list of the action run against all the test fixtures
+            <details>
+              <summary>Dot file test</summary>
+
+              ${{ steps.ci-dot-file.outputs.categorized-resources }}
+            </details>
+
+            <details>
+              <summary>Terraform directory test</summary>
+
+              ${{ steps.ci-tf-dir.outputs.categorized-resources }}
+            </details>
+
+            <details>
+              <summary>Terraform state test</summary>
+
+              ${{ steps.ci-state-file.outputs.categorized-resources }}
+            </details>
+          comment_tag: summary-comment
+          mode: recreate

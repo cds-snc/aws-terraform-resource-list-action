@@ -1,0 +1,297 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_acm_certificate.sre_bot (expand)" [label = "aws_acm_certificate.sre_bot", shape = "box"]
+		"[root] aws_acm_certificate_validation.sre_bot (expand)" [label = "aws_acm_certificate_validation.sre_bot", shape = "box"]
+		"[root] aws_cloudwatch_log_group.sre-bot_group (expand)" [label = "aws_cloudwatch_log_group.sre-bot_group", shape = "box"]
+		"[root] aws_cloudwatch_log_group.sre_bot_dns (expand)" [label = "aws_cloudwatch_log_group.sre_bot_dns", shape = "box"]
+		"[root] aws_cloudwatch_log_resource_policy.route53_resolver_logging_policy (expand)" [label = "aws_cloudwatch_log_resource_policy.route53_resolver_logging_policy", shape = "box"]
+		"[root] aws_cloudwatch_log_stream.sre-bot_stream (expand)" [label = "aws_cloudwatch_log_stream.sre-bot_stream", shape = "box"]
+		"[root] aws_dynamodb_table.aws_access_requests_table (expand)" [label = "aws_dynamodb_table.aws_access_requests_table", shape = "box"]
+		"[root] aws_dynamodb_table.sre_bot_data (expand)" [label = "aws_dynamodb_table.sre_bot_data", shape = "box"]
+		"[root] aws_dynamodb_table.webhooks_table (expand)" [label = "aws_dynamodb_table.webhooks_table", shape = "box"]
+		"[root] aws_ecr_repository.sre-bot (expand)" [label = "aws_ecr_repository.sre-bot", shape = "box"]
+		"[root] aws_ecs_cluster.sre-bot (expand)" [label = "aws_ecs_cluster.sre-bot", shape = "box"]
+		"[root] aws_ecs_service.main (expand)" [label = "aws_ecs_service.main", shape = "box"]
+		"[root] aws_ecs_task_definition.sre-bot (expand)" [label = "aws_ecs_task_definition.sre-bot", shape = "box"]
+		"[root] aws_iam_policy.sre-bot_secrets_manager (expand)" [label = "aws_iam_policy.sre-bot_secrets_manager", shape = "box"]
+		"[root] aws_iam_role.sre-bot (expand)" [label = "aws_iam_role.sre-bot", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.ecs_task_execution (expand)" [label = "aws_iam_role_policy_attachment.ecs_task_execution", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.secrets_manager (expand)" [label = "aws_iam_role_policy_attachment.secrets_manager", shape = "box"]
+		"[root] aws_lb.sre_bot (expand)" [label = "aws_lb.sre_bot", shape = "box"]
+		"[root] aws_lb_listener.sre_bot_listener (expand)" [label = "aws_lb_listener.sre_bot_listener", shape = "box"]
+		"[root] aws_lb_target_group.sre_bot (expand)" [label = "aws_lb_target_group.sre_bot", shape = "box"]
+		"[root] aws_route53_health_check.sre_bot_healthcheck (expand)" [label = "aws_route53_health_check.sre_bot_healthcheck", shape = "box"]
+		"[root] aws_route53_record.sre_bot (expand)" [label = "aws_route53_record.sre_bot", shape = "box"]
+		"[root] aws_route53_record.sre_bot_certificate_validation (expand)" [label = "aws_route53_record.sre_bot_certificate_validation", shape = "box"]
+		"[root] aws_route53_resolver_query_log_config.sre_bot (expand)" [label = "aws_route53_resolver_query_log_config.sre_bot", shape = "box"]
+		"[root] aws_route53_resolver_query_log_config_association.sre_bot (expand)" [label = "aws_route53_resolver_query_log_config_association.sre_bot", shape = "box"]
+		"[root] aws_route53_zone.sre_bot (expand)" [label = "aws_route53_zone.sre_bot", shape = "box"]
+		"[root] aws_security_group.ecs_tasks (expand)" [label = "aws_security_group.ecs_tasks", shape = "box"]
+		"[root] aws_security_group.sre_bot_load_balancer (expand)" [label = "aws_security_group.sre_bot_load_balancer", shape = "box"]
+		"[root] data.aws_caller_identity.current (expand)" [label = "data.aws_caller_identity.current", shape = "box"]
+		"[root] data.aws_iam_policy_document.route53_resolver_logging_policy (expand)" [label = "data.aws_iam_policy_document.route53_resolver_logging_policy", shape = "box"]
+		"[root] data.aws_iam_policy_document.sre-bot (expand)" [label = "data.aws_iam_policy_document.sre-bot", shape = "box"]
+		"[root] data.aws_iam_policy_document.sre-bot_secrets_manager (expand)" [label = "data.aws_iam_policy_document.sre-bot_secrets_manager", shape = "box"]
+		"[root] data.template_file.sre-bot (expand)" [label = "data.template_file.sre-bot", shape = "box"]
+		"[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)" [label = "module.vpc.aws_cloudwatch_log_group.flow_logs", shape = "box"]
+		"[root] module.vpc.aws_default_network_acl.default (expand)" [label = "module.vpc.aws_default_network_acl.default", shape = "box"]
+		"[root] module.vpc.aws_default_route_table.default (expand)" [label = "module.vpc.aws_default_route_table.default", shape = "box"]
+		"[root] module.vpc.aws_default_security_group.default (expand)" [label = "module.vpc.aws_default_security_group.default", shape = "box"]
+		"[root] module.vpc.aws_eip.nat (expand)" [label = "module.vpc.aws_eip.nat", shape = "box"]
+		"[root] module.vpc.aws_flow_log.flow_logs (expand)" [label = "module.vpc.aws_flow_log.flow_logs", shape = "box"]
+		"[root] module.vpc.aws_iam_policy.vpc_metrics_flow_logs_write_policy (expand)" [label = "module.vpc.aws_iam_policy.vpc_metrics_flow_logs_write_policy", shape = "box"]
+		"[root] module.vpc.aws_iam_role.flow_logs (expand)" [label = "module.vpc.aws_iam_role.flow_logs", shape = "box"]
+		"[root] module.vpc.aws_iam_role_policy_attachment.vpc_metrics_flow_logs_write_policy_attach (expand)" [label = "module.vpc.aws_iam_role_policy_attachment.vpc_metrics_flow_logs_write_policy_attach", shape = "box"]
+		"[root] module.vpc.aws_internet_gateway.gw (expand)" [label = "module.vpc.aws_internet_gateway.gw", shape = "box"]
+		"[root] module.vpc.aws_nat_gateway.nat_gw (expand)" [label = "module.vpc.aws_nat_gateway.nat_gw", shape = "box"]
+		"[root] module.vpc.aws_network_acl.main (expand)" [label = "module.vpc.aws_network_acl.main", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.block_rdp (expand)" [label = "module.vpc.aws_network_acl_rule.block_rdp", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.block_ssh (expand)" [label = "module.vpc.aws_network_acl_rule.block_ssh", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_egress_443 (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_egress_443", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_443 (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_in_ingress_443", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_ephemeral (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_in_ingress_ephemeral", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_443 (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_in_response_egress_443", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_ephemeral (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_in_response_egress_ephemeral", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_egress_ephemeral (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_out_egress_ephemeral", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_443 (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_out_response_ingress_443", shape = "box"]
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_ephemeral (expand)" [label = "module.vpc.aws_network_acl_rule.https_request_out_response_ingress_ephemeral", shape = "box"]
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" [label = "module.vpc.aws_route.private_nat_gateway", shape = "box"]
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" [label = "module.vpc.aws_route.public_internet_gateway", shape = "box"]
+		"[root] module.vpc.aws_route_table.private (expand)" [label = "module.vpc.aws_route_table.private", shape = "box"]
+		"[root] module.vpc.aws_route_table.public (expand)" [label = "module.vpc.aws_route_table.public", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.private (expand)" [label = "module.vpc.aws_route_table_association.private", shape = "box"]
+		"[root] module.vpc.aws_route_table_association.public (expand)" [label = "module.vpc.aws_route_table_association.public", shape = "box"]
+		"[root] module.vpc.aws_subnet.private (expand)" [label = "module.vpc.aws_subnet.private", shape = "box"]
+		"[root] module.vpc.aws_subnet.public (expand)" [label = "module.vpc.aws_subnet.public", shape = "box"]
+		"[root] module.vpc.aws_vpc.main (expand)" [label = "module.vpc.aws_vpc.main", shape = "box"]
+		"[root] module.vpc.data.aws_availability_zones.available (expand)" [label = "module.vpc.data.aws_availability_zones.available", shape = "box"]
+		"[root] module.vpc.data.aws_iam_policy_document.vpc_flow_logs_service_principal (expand)" [label = "module.vpc.data.aws_iam_policy_document.vpc_flow_logs_service_principal", shape = "box"]
+		"[root] module.vpc.data.aws_iam_policy_document.vpc_metrics_flow_logs_write (expand)" [label = "module.vpc.data.aws_iam_policy_document.vpc_metrics_flow_logs_write", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/template\"]" [label = "provider[\"registry.terraform.io/hashicorp/template\"]", shape = "diamond"]
+		"[root] var.billing_code" [label = "var.billing_code", shape = "note"]
+		"[root] var.fargate_cpu" [label = "var.fargate_cpu", shape = "note"]
+		"[root] var.fargate_memory" [label = "var.fargate_memory", shape = "note"]
+		"[root] aws_acm_certificate.sre_bot (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_acm_certificate.sre_bot (expand)" -> "[root] var.billing_code"
+		"[root] aws_acm_certificate_validation.sre_bot (expand)" -> "[root] aws_route53_record.sre_bot_certificate_validation (expand)"
+		"[root] aws_cloudwatch_log_group.sre-bot_group (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_log_group.sre_bot_dns (expand)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_cloudwatch_log_resource_policy.route53_resolver_logging_policy (expand)" -> "[root] data.aws_iam_policy_document.route53_resolver_logging_policy (expand)"
+		"[root] aws_cloudwatch_log_stream.sre-bot_stream (expand)" -> "[root] aws_cloudwatch_log_group.sre-bot_group (expand)"
+		"[root] aws_dynamodb_table.aws_access_requests_table (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_dynamodb_table.sre_bot_data (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_dynamodb_table.webhooks_table (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ecr_repository.sre-bot (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ecs_cluster.sre-bot (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ecs_service.main (expand)" -> "[root] aws_ecs_cluster.sre-bot (expand)"
+		"[root] aws_ecs_service.main (expand)" -> "[root] aws_ecs_task_definition.sre-bot (expand)"
+		"[root] aws_ecs_service.main (expand)" -> "[root] aws_iam_role_policy_attachment.ecs_task_execution (expand)"
+		"[root] aws_ecs_service.main (expand)" -> "[root] aws_lb_listener.sre_bot_listener (expand)"
+		"[root] aws_ecs_service.main (expand)" -> "[root] aws_security_group.ecs_tasks (expand)"
+		"[root] aws_ecs_service.main (expand)" -> "[root] module.vpc.output.private_subnet_ids (expand)"
+		"[root] aws_ecs_task_definition.sre-bot (expand)" -> "[root] aws_iam_role.sre-bot (expand)"
+		"[root] aws_ecs_task_definition.sre-bot (expand)" -> "[root] data.template_file.sre-bot (expand)"
+		"[root] aws_iam_policy.sre-bot_secrets_manager (expand)" -> "[root] data.aws_iam_policy_document.sre-bot_secrets_manager (expand)"
+		"[root] aws_iam_role.sre-bot (expand)" -> "[root] data.aws_iam_policy_document.sre-bot (expand)"
+		"[root] aws_iam_role.sre-bot (expand)" -> "[root] var.billing_code"
+		"[root] aws_iam_role_policy_attachment.ecs_task_execution (expand)" -> "[root] aws_iam_role.sre-bot (expand)"
+		"[root] aws_iam_role_policy_attachment.secrets_manager (expand)" -> "[root] aws_iam_policy.sre-bot_secrets_manager (expand)"
+		"[root] aws_iam_role_policy_attachment.secrets_manager (expand)" -> "[root] aws_iam_role.sre-bot (expand)"
+		"[root] aws_lb.sre_bot (expand)" -> "[root] aws_security_group.sre_bot_load_balancer (expand)"
+		"[root] aws_lb.sre_bot (expand)" -> "[root] module.vpc.output.public_subnet_ids (expand)"
+		"[root] aws_lb_listener.sre_bot_listener (expand)" -> "[root] aws_acm_certificate_validation.sre_bot (expand)"
+		"[root] aws_lb_listener.sre_bot_listener (expand)" -> "[root] aws_lb.sre_bot (expand)"
+		"[root] aws_lb_listener.sre_bot_listener (expand)" -> "[root] aws_lb_target_group.sre_bot (expand)"
+		"[root] aws_lb_target_group.sre_bot (expand)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_route53_health_check.sre_bot_healthcheck (expand)" -> "[root] aws_route53_zone.sre_bot (expand)"
+		"[root] aws_route53_record.sre_bot (expand)" -> "[root] aws_lb.sre_bot (expand)"
+		"[root] aws_route53_record.sre_bot (expand)" -> "[root] aws_route53_zone.sre_bot (expand)"
+		"[root] aws_route53_record.sre_bot_certificate_validation (expand)" -> "[root] aws_acm_certificate.sre_bot (expand)"
+		"[root] aws_route53_record.sre_bot_certificate_validation (expand)" -> "[root] aws_route53_zone.sre_bot (expand)"
+		"[root] aws_route53_resolver_query_log_config.sre_bot (expand)" -> "[root] aws_cloudwatch_log_group.sre_bot_dns (expand)"
+		"[root] aws_route53_resolver_query_log_config_association.sre_bot (expand)" -> "[root] aws_route53_resolver_query_log_config.sre_bot (expand)"
+		"[root] aws_route53_zone.sre_bot (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_route53_zone.sre_bot (expand)" -> "[root] var.billing_code"
+		"[root] aws_security_group.ecs_tasks (expand)" -> "[root] module.vpc.output.cidr_block (expand)"
+		"[root] aws_security_group.ecs_tasks (expand)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] aws_security_group.sre_bot_load_balancer (expand)" -> "[root] module.vpc.output.cidr_block (expand)"
+		"[root] aws_security_group.sre_bot_load_balancer (expand)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] data.aws_caller_identity.current (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.route53_resolver_logging_policy (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.sre-bot (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.sre-bot_secrets_manager (expand)" -> "[root] aws_dynamodb_table.aws_access_requests_table (expand)"
+		"[root] data.aws_iam_policy_document.sre-bot_secrets_manager (expand)" -> "[root] aws_dynamodb_table.webhooks_table (expand)"
+		"[root] data.aws_iam_policy_document.sre-bot_secrets_manager (expand)" -> "[root] data.aws_caller_identity.current (expand)"
+		"[root] data.template_file.sre-bot (expand)" -> "[root] aws_cloudwatch_log_group.sre-bot_group (expand)"
+		"[root] data.template_file.sre-bot (expand)" -> "[root] aws_ecr_repository.sre-bot (expand)"
+		"[root] data.template_file.sre-bot (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/template\"]"
+		"[root] data.template_file.sre-bot (expand)" -> "[root] var.fargate_cpu"
+		"[root] data.template_file.sre-bot (expand)" -> "[root] var.fargate_memory"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_cloudwatch_log_resource_policy.route53_resolver_logging_policy (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_cloudwatch_log_stream.sre-bot_stream (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_dynamodb_table.sre_bot_data (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_ecs_service.main (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_iam_role_policy_attachment.secrets_manager (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_route53_health_check.sre_bot_healthcheck (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_route53_record.sre_bot (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] aws_route53_resolver_query_log_config_association.sre_bot (expand)"
+		"[root] meta.count-boundary (EachMode fixup)" -> "[root] module.vpc (close)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_default_network_acl.default (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_default_route_table.default (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_default_security_group.default (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_flow_log.flow_logs (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_iam_role_policy_attachment.vpc_metrics_flow_logs_write_policy_attach (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.block_rdp (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.block_ssh (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_egress_443 (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_443 (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_ephemeral (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_443 (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_ephemeral (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_out_egress_ephemeral (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_443 (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_ephemeral (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route.private_nat_gateway (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route.public_internet_gateway (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.private (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.aws_route_table_association.public (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.cidr_block (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.main_nacl_id (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.main_route_table_id (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.private_route_table_ids (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.private_subnet_ids (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.public_ips (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.public_subnet_ids (expand)"
+		"[root] module.vpc (close)" -> "[root] module.vpc.output.vpc_id (expand)"
+		"[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)" -> "[root] module.vpc.local.common_tags (expand)"
+		"[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)" -> "[root] module.vpc.var.enable_flow_log (expand)"
+		"[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.aws_default_network_acl.default (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_default_route_table.default (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_default_security_group.default (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.local.common_tags (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.local.max_subnet_length (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.var.enable_eip (expand)"
+		"[root] module.vpc.aws_eip.nat (expand)" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_flow_log.flow_logs (expand)" -> "[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)"
+		"[root] module.vpc.aws_flow_log.flow_logs (expand)" -> "[root] module.vpc.aws_iam_role.flow_logs (expand)"
+		"[root] module.vpc.aws_flow_log.flow_logs (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_iam_policy.vpc_metrics_flow_logs_write_policy (expand)" -> "[root] module.vpc.data.aws_iam_policy_document.vpc_metrics_flow_logs_write (expand)"
+		"[root] module.vpc.aws_iam_role.flow_logs (expand)" -> "[root] module.vpc.data.aws_iam_policy_document.vpc_flow_logs_service_principal (expand)"
+		"[root] module.vpc.aws_iam_role.flow_logs (expand)" -> "[root] module.vpc.local.common_tags (expand)"
+		"[root] module.vpc.aws_iam_role.flow_logs (expand)" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_iam_role_policy_attachment.vpc_metrics_flow_logs_write_policy_attach (expand)" -> "[root] module.vpc.aws_iam_policy.vpc_metrics_flow_logs_write_policy (expand)"
+		"[root] module.vpc.aws_iam_role_policy_attachment.vpc_metrics_flow_logs_write_policy_attach (expand)" -> "[root] module.vpc.aws_iam_role.flow_logs (expand)"
+		"[root] module.vpc.aws_internet_gateway.gw (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_nat_gateway.nat_gw (expand)" -> "[root] module.vpc.aws_internet_gateway.gw (expand)"
+		"[root] module.vpc.aws_nat_gateway.nat_gw (expand)" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.aws_nat_gateway.nat_gw (expand)" -> "[root] module.vpc.local.nat_gateway_ips (expand)"
+		"[root] module.vpc.aws_network_acl.main (expand)" -> "[root] module.vpc.aws_subnet.private (expand)"
+		"[root] module.vpc.aws_network_acl.main (expand)" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.aws_network_acl_rule.block_rdp (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.block_rdp (expand)" -> "[root] module.vpc.var.block_rdp (expand)"
+		"[root] module.vpc.aws_network_acl_rule.block_ssh (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.block_ssh (expand)" -> "[root] module.vpc.var.block_ssh (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_egress_443 (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_egress_443 (expand)" -> "[root] module.vpc.var.allow_https_request_out (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_443 (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_443 (expand)" -> "[root] module.vpc.var.allow_https_request_in (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_ephemeral (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_ephemeral (expand)" -> "[root] module.vpc.var.allow_https_request_in (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_443 (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_443 (expand)" -> "[root] module.vpc.var.allow_https_request_in_response (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_ephemeral (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_ephemeral (expand)" -> "[root] module.vpc.var.allow_https_request_in_response (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_egress_ephemeral (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_egress_ephemeral (expand)" -> "[root] module.vpc.var.allow_https_request_out (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_443 (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_443 (expand)" -> "[root] module.vpc.var.allow_https_request_out_response (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_ephemeral (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_ephemeral (expand)" -> "[root] module.vpc.var.allow_https_request_out_response (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" -> "[root] module.vpc.aws_nat_gateway.nat_gw (expand)"
+		"[root] module.vpc.aws_route.private_nat_gateway (expand)" -> "[root] module.vpc.aws_route_table.private (expand)"
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" -> "[root] module.vpc.aws_internet_gateway.gw (expand)"
+		"[root] module.vpc.aws_route.public_internet_gateway (expand)" -> "[root] module.vpc.aws_route_table.public (expand)"
+		"[root] module.vpc.aws_route_table.private (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_route_table.private (expand)" -> "[root] module.vpc.local.max_subnet_length (expand)"
+		"[root] module.vpc.aws_route_table.public (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_route_table_association.private (expand)" -> "[root] module.vpc.aws_route_table.private (expand)"
+		"[root] module.vpc.aws_route_table_association.private (expand)" -> "[root] module.vpc.aws_subnet.private (expand)"
+		"[root] module.vpc.aws_route_table_association.public (expand)" -> "[root] module.vpc.aws_route_table.public (expand)"
+		"[root] module.vpc.aws_route_table_association.public (expand)" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.aws_subnet.private (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_subnet.private (expand)" -> "[root] module.vpc.local.max_subnet_length (expand)"
+		"[root] module.vpc.aws_subnet.public (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.aws_subnet.public (expand)" -> "[root] module.vpc.local.max_subnet_length (expand)"
+		"[root] module.vpc.aws_vpc.main (expand)" -> "[root] module.vpc.local.common_tags (expand)"
+		"[root] module.vpc.aws_vpc.main (expand)" -> "[root] module.vpc.var.name (expand)"
+		"[root] module.vpc.aws_vpc.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.data.aws_availability_zones.available (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.data.aws_availability_zones.available (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.data.aws_iam_policy_document.vpc_flow_logs_service_principal (expand)" -> "[root] module.vpc.var.enable_flow_log (expand)"
+		"[root] module.vpc.data.aws_iam_policy_document.vpc_flow_logs_service_principal (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.vpc.data.aws_iam_policy_document.vpc_metrics_flow_logs_write (expand)" -> "[root] module.vpc.aws_cloudwatch_log_group.flow_logs (expand)"
+		"[root] module.vpc.local.common_tags (expand)" -> "[root] module.vpc.var.billing_tag_key (expand)"
+		"[root] module.vpc.local.common_tags (expand)" -> "[root] module.vpc.var.billing_tag_value (expand)"
+		"[root] module.vpc.local.max_subnet_length (expand)" -> "[root] module.vpc.local.zone_names (expand)"
+		"[root] module.vpc.local.nat_gateway_ips (expand)" -> "[root] module.vpc.aws_eip.nat (expand)"
+		"[root] module.vpc.local.zone_names (expand)" -> "[root] module.vpc.data.aws_availability_zones.available (expand)"
+		"[root] module.vpc.local.zone_names (expand)" -> "[root] module.vpc.var.high_availability (expand)"
+		"[root] module.vpc.output.cidr_block (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.output.main_nacl_id (expand)" -> "[root] module.vpc.aws_network_acl.main (expand)"
+		"[root] module.vpc.output.main_route_table_id (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.output.private_route_table_ids (expand)" -> "[root] module.vpc.aws_route_table.private (expand)"
+		"[root] module.vpc.output.private_subnet_ids (expand)" -> "[root] module.vpc.aws_subnet.private (expand)"
+		"[root] module.vpc.output.public_ips (expand)" -> "[root] module.vpc.aws_eip.nat (expand)"
+		"[root] module.vpc.output.public_subnet_ids (expand)" -> "[root] module.vpc.aws_subnet.public (expand)"
+		"[root] module.vpc.output.vpc_id (expand)" -> "[root] module.vpc.aws_vpc.main (expand)"
+		"[root] module.vpc.var.allow_https_request_in (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.allow_https_request_in_response (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.allow_https_request_out (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.allow_https_request_out_response (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.billing_tag_key (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.billing_tag_value (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.billing_tag_value (expand)" -> "[root] var.billing_code"
+		"[root] module.vpc.var.block_rdp (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.block_ssh (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.enable_eip (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.enable_flow_log (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.high_availability (expand)" -> "[root] module.vpc (expand)"
+		"[root] module.vpc.var.name (expand)" -> "[root] module.vpc (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_resource_policy.route53_resolver_logging_policy (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_stream.sre-bot_stream (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_dynamodb_table.sre_bot_data (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_ecs_service.main (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.secrets_manager (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_health_check.sre_bot_healthcheck (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_record.sre_bot (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_resolver_query_log_config_association.sre_bot (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_default_network_acl.default (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_default_route_table.default (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_default_security_group.default (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_flow_log.flow_logs (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_iam_role_policy_attachment.vpc_metrics_flow_logs_write_policy_attach (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.block_rdp (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.block_ssh (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_egress_443 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_443 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_ingress_ephemeral (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_443 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_in_response_egress_ephemeral (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_out_egress_ephemeral (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_443 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_network_acl_rule.https_request_out_response_ingress_ephemeral (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route.private_nat_gateway (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route.public_internet_gateway (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.private (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.vpc.aws_route_table_association.public (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/template\"] (close)" -> "[root] data.template_file.sre-bot (expand)"
+		"[root] root" -> "[root] meta.count-boundary (EachMode fixup)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/template\"] (close)"
+	}
+}
