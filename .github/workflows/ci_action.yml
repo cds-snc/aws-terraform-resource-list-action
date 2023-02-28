@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
       - name: Test dot file
+        id: ci-dot-file
         uses: ./
         with:
           dot-file-path: ./test_fixtures/graph.dot
@@ -19,5 +20,5 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            Foo: ${{ steps.ci-action.outputs.categorized-resources }}
+            Foo: ${{ steps.ci-dot-file.outputs.categorized-resources }}
           comment_tag: dot-file-path
