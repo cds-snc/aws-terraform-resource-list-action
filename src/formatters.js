@@ -1,4 +1,3 @@
-
 const nunjucks = require("nunjucks");
 
 const template = `
@@ -19,8 +18,8 @@ const template = `
 `;
 
 const markdown = (resourceList) => {
-    const env = new nunjucks.Environment();
-    env.renderString(template, { resourceList });
-}
+  const env = new nunjucks.Environment();
+  return env.renderString(template, { resourceList });
+};
 
 exports.markdown = markdown;
