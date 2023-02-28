@@ -1,0 +1,22 @@
+name: CI Action
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+      - name: Test dot file
+        uses: ./
+        with:
+          dot-file-path: ./test_fixtures/graph.dot
+          output-format: markdown
+      - name: Comment on PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: ${{ steps.ci-action.outputs.resources }}
+          comment_tag: dot-file-path
