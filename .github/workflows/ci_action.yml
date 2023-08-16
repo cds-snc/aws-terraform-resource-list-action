@@ -29,7 +29,7 @@ jobs:
           terraform-state-path: ./test_fixtures/state.json
           output-format: markdown
       - name: Comment on PR
-        uses: thollander/actions-comment-pull-request@dadb7667129e23f12ca3925c90dc5cd7121ab57e # v2.4.0
+        uses: thollander/actions-comment-pull-request@d61db783da9abefc3437960d0cce08552c7c004f # v2.4.2
         with:
           message: |
             #### Below is a list of the action run against all the test fixtures
